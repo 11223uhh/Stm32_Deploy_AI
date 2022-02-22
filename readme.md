@@ -45,6 +45,6 @@
 - python  模型量化，仿真
 - Example 相关例子
 ## 
-## 使用方法(仅仅介绍基于ARM CMISI NN)
+## 使用方法(仅仅介绍基于ARM CMISI NN的模型部署和Opencv移植)
 参考  get_start.md
 ##
