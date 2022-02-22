@@ -1,12 +1,12 @@
-**本项目基本上基于ARM CMISIS NN库，相当于CMISIS NN的一个应用,但对NN库进行了一定裁剪，扩充，解释，也可以单片机运行Opencv1.0。若有不足，敬请原谅。更多资料可查看ARM CMIS NN库**
+**本项目基本上基于ARM CMISIS NN库，相当于CMISIS NN的一个应用,但对NN库进行了一定裁剪，扩充，解释，也可以单片机运行Opencv1.0。若有不足，可以在Issues提出，有时间会看的。更多资料可查看ARM CMIS NN库**
 ## 特点
 - 可以将Mxnet训练好的模型，量化之后，部署在单片机。
 - 有仿真平台可以模拟实际运行数据，精确度，所需RAM和ROM。
 - 可以使用一些Opencv 1.0的简单函数,如图片缩放,灰度化,边缘检测,霍夫变换,腐蚀,膨胀等.
 - 可以查看每一层的输出。
 - 目前仅支持VGG块，不支持Resnet，nin，googlenet，mobbilenet，未来可以更新，敬请期待。
-- 使用CMISIS NN库加快单片机运行模型速度。
 - 带有例程方便理解。
+- 为了方便移植仅使用CMSIS NN库一些基础函数，并未使用一些加速函数。
 ##
 ## python环境要求
 - mxnet-cu100    =1.5.0 
@@ -45,6 +45,6 @@
 - python  模型量化，仿真
 - Example 相关例子
 ## 
-## 使用方法(仅仅介绍基于ARM CMISI NN)
+## 使用方法(仅仅介绍基于ARM CMISI NN的模型部署和Opencv移植)
 参考  get_start.md
 ##

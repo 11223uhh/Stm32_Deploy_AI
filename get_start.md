@@ -85,3 +85,6 @@ CONV_BIAS_LSHIFT_0, CONV_OUT_RSHIFT_0, img_buffer1, CONV_OUT_DIM_0,(q15_t *) col
             OUT_RSHIFT 输出偏移       
 ```
 **备注:** 以上仅为示例，根据需要进行修改,全部代码在CMSIS 仿真.ipynb中.
+
+### opencv移植
+  参考Example中opencv文件夹里的readme.md
