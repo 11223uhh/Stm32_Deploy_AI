@@ -1,6 +1,6 @@
 
 
-本项目基本上基于ARM CMISIS NN库，相当于CMISIS NN的一个应用,但对NN库进行了一定裁剪和扩充，也可以单片机运行Opencv1.0。若有不足，敬请原谅。更多资料可查看ARM CMIS NN库
+本项目基本上基于ARM CMISIS NN库，相当于CMISIS NN的一个应用,但对NN库进行了一定裁剪，扩充，解释，也可以单片机运行Opencv1.0。若有不足，敬请原谅。更多资料可查看ARM CMIS NN库
 python环境要求:
   1. mxnet-cu100          1.5.0
   2. d2lzh                1.0.0
