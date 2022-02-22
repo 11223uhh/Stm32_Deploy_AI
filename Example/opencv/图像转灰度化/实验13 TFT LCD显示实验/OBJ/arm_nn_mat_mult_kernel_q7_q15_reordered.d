@@ -1,0 +1,10 @@
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\NN\Source\ConvolutionFunctions\arm_nn_mat_mult_kernel_q7_q15_reordered.c
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: ..\CMSIS\NN\Include\arm_nnfunctions.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: ..\CMSIS\NN\Include\arm_nnsupportfunctions.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: ..\CMSIS\DSP\Include\arm_math.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: ..\CORE\core_cm4.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: ..\CORE\core_cmInstr.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: ..\CORE\core_cmFunc.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: ..\CORE\core_cm4_simd.h
+..\obj\arm_nn_mat_mult_kernel_q7_q15_reordered.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h

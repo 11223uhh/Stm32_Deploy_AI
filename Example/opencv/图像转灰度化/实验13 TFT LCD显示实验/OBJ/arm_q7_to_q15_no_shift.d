@@ -1,0 +1,9 @@
+..\obj\arm_q7_to_q15_no_shift.o: D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\NN\Source\NNSupportFunctions\arm_q7_to_q15_no_shift.c
+..\obj\arm_q7_to_q15_no_shift.o: ..\CMSIS\NN\Include\arm_nnsupportfunctions.h
+..\obj\arm_q7_to_q15_no_shift.o: ..\CMSIS\DSP\Include\arm_math.h
+..\obj\arm_q7_to_q15_no_shift.o: ..\CORE\core_cm4.h
+..\obj\arm_q7_to_q15_no_shift.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\arm_q7_to_q15_no_shift.o: ..\CORE\core_cmInstr.h
+..\obj\arm_q7_to_q15_no_shift.o: ..\CORE\core_cmFunc.h
+..\obj\arm_q7_to_q15_no_shift.o: ..\CORE\core_cm4_simd.h
+..\obj\arm_q7_to_q15_no_shift.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h

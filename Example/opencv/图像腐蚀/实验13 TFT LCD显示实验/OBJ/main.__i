@@ -1,0 +1,7 @@
+--cpp -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\FWLIB\inc -I ..\CMSIS\NN\Include -I ..\CMSIS\DSP\Include -I ..\opencv\cv\include -I ..\opencv\cvaux\include -I ..\opencv\cxcore\include -I ..\MALLOC
+-I.\RTE\_LCD
+-ID:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Device\Include
+-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1U"
+-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d "main.cpp"

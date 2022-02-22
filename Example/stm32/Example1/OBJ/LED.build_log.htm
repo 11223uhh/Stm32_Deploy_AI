@@ -1,0 +1,127 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ssdf ºú³Ì³©, sdfsdf, LIC=D0D7S-LJDER-SBIEJ-US6IW-N20WN-WZLAL
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.26.2.0
+Toolchain Path:  D:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      CMSIS_AGDI.dll V1.30.6.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+D:\github_responsity\Example\stm32\Example1\USER\LED.uvprojx
+Project File Date:  02/22/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\keil5\ARM\ARMCC\Bin'
+Build target 'LED'
+compiling ai.c...
+compiling stm32f4xx_it.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "stm32f4xx.h")
+        #define __FPU_USED       1U
+stm32f4xx_it.c: 1 warning, 0 errors
+compiling main.cpp...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+main.cpp(44): warning:  #177-D: variable "temp_po"  was declared but never referenced
+  q7_t     *temp_po;
+main.cpp: 2 warnings, 0 errors
+compiling led.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\HARDWARE\LED\led.c: 1 warning, 0 errors
+compiling delay.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\SYSTEM\delay\delay.c: 1 warning, 0 errors
+compiling lcd.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\HARDWARE\LCD\lcd.c: 1 warning, 0 errors
+compiling sys.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\SYSTEM\sys\sys.c: 1 warning, 0 errors
+compiling misc.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\FWLIB\src\misc.c: 1 warning, 0 errors
+compiling usart.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\SYSTEM\usart\usart.c: 1 warning, 0 errors
+compiling stm32f4xx_gpio.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\FWLIB\src\stm32f4xx_gpio.c: 1 warning, 0 errors
+compiling stm32f4xx_rcc.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\FWLIB\src\stm32f4xx_rcc.c: 1 warning, 0 errors
+assembling startup_stm32f407xx.s...
+compiling stm32f4xx_syscfg.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\FWLIB\src\stm32f4xx_syscfg.c: 1 warning, 0 errors
+compiling stm32f4xx_usart.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\FWLIB\src\stm32f4xx_usart.c: 1 warning, 0 errors
+compiling stm32f4xx_fsmc.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+..\FWLIB\src\stm32f4xx_fsmc.c: 1 warning, 0 errors
+compiling system_stm32f4xx.c...
+D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"  (declared at line 167 of "..\USER\stm32f4xx.h")
+        #define __FPU_USED       1U
+RTE\Device\STM32F407ZG\system_stm32f4xx.c: 1 warning, 0 errors
+linking...
+Program Size: Code=2422 RO-data=2242 RW-data=3360 ZI-data=88248  
+FromELF: creating hex file...
+"..\OBJ\LED.axf" - 0 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
+                Keil.STM32F4xx_DFP.2.13.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.2
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_LED
+  D:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  D:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+
+   * Component: Keil::Device:Startup:2.6.2
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
