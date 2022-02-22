@@ -28,6 +28,7 @@ STM32 要求:
  Arduino例子:
  	基于ARM CMISI NN 库，识别一张给定的mnist图片，可以通过串口发送图片识别。
  opencv 例子:
+ 	
 使用本项目方法:(仅介绍基于ARM CMISI NN),若嫌麻烦，可以直接下载项目例子，配合理解。
   1 .模型训练完毕，使用net.save_parameters("file_name") 
      net       为训练的模型
