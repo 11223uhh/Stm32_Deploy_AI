@@ -34,7 +34,7 @@ STM32 要求:
   1 .模型训练完毕，使用net.save_parameters("file_name") 
      net       为训练的模型
      file_name 任意即可，没有后缀名要求
-  2. 模型量化，类似下方代码。全部代码在量化并存储模型4.0和测试.ipynb中，根据需要进行修改，模型量化采用手动最大量化。
+  2. 模型量化，类似下方代码。全部代码在量化并存储模型.ipynb中，根据需要进行修改，模型量化采用手动最大量化。
       net = nn.Sequential()
       ///////////////////////////////////模型结构搭建
       net.add(nn.Conv2D(channels=1, kernel_size=3, activation='relu'),
@@ -80,7 +80,7 @@ CONV_BIAS_LSHIFT_0, CONV_OUT_RSHIFT_0, img_buffer1, CONV_OUT_DIM_0,(q15_t *) col
        
       arm_fully_connected_q7(img_buffer2, ip1_wt, IP1_DIM_4, IP1_OUT_4, Dense_BIAS_LSHIFT_4, Dense_OUT_RSHIFT_4, ip1_bias,
                                  output_data, (q15_t *) img_buffer1);                
-  4. 模型仿真,类似下方代码。全部代码在CMSIS 仿真3.0.ipynb中，根据需要进行修改
+  4. 模型仿真,类似下方代码。全部代码在CMSIS 仿真.ipynb中，根据需要进行修改
         net = nn.Sequential()
         ///////////////////////////////////模型结构搭建
         net.add(nn.Conv2D(channels=1, kernel_size=3, activation='relu'),
