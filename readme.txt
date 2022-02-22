@@ -21,7 +21,14 @@ STM32 要求:
   4 . 可以查看每一层的输出。
   5 . 目前仅支持VGG块，不支持Resnet，nin，googlenet，mobbilenet，未来可以更新，敬请期待。
   6 . 使用CMISIS NN库加快单片机运行模型速度。
-使用本项目方法:(仅介绍方法二),若嫌麻烦，可以直接下载项目例子，配合理解。
+  7.  带有例程方便理解。
+例子:
+ STM32例子:
+  	基于ARM CMISI NN 库，识别一张给定的mnist图片，图片已经写入代码。
+ Arduino例子:
+ 	基于ARM CMISI NN 库，识别一张给定的mnist图片，可以通过串口发送图片识别。
+ opencv 例子:
+使用本项目方法:(仅介绍基于ARM CMISI NN),若嫌麻烦，可以直接下载项目例子，配合理解。
   1 .模型训练完毕，使用net.save_parameters("file_name") 
      net       为训练的模型
      file_name 任意即可，没有后缀名要求
