@@ -60,9 +60,9 @@ STM32 要求:
              img_buffer2[i] =(q7_t)image_data[i];//往数组存数据，根据实际情况，添加数据。需要将三维数组reshape一维，添加。这只是一个例子
              // 28 *28 *1为输入数据维度。
          5.添加以下代码，模型开始迭代。需要根据自己情况进行修改，以下只是一层relu卷积，一层池化，一层全连接。变量均在生成的.h文件中。
-         	arm_convolve_HWC_q7_basic(img_buffer2, CONV_IM_DIM_0, CONV_IM_CH_0, conv1_wt, CONV_OUT_CH_0, CONV_KER_DIM_0, CONV_PADDING_0,CONV_STRIDE_0, conv1_bias, 
+       arm_convolve_HWC_q7_basic(img_buffer2, CONV_IM_DIM_0, CONV_IM_CH_0, conv1_wt, CONV_OUT_CH_0, CONV_KER_DIM_0, CONV_PADDING_0,CONV_STRIDE_0, conv1_bias, 
 CONV_BIAS_LSHIFT_0, CONV_OUT_RSHIFT_0, img_buffer1, CONV_OUT_DIM_0,(q15_t *) col_buffer, NULL);	//基础卷积层
-        arm_relu_q7(img_buffer1, CONV_OUT_DIM_0 * CONV_OUT_DIM_0 * CONV_OUT_CH_0);///relu激活
+       arm_relu_q7(img_buffer1, CONV_OUT_DIM_0 * CONV_OUT_DIM_0 * CONV_OUT_CH_0);///relu激活
        arm_maxpool_q7_HWC(img_buffer1, CONV_OUT_DIM_0, CONV_OUT_CH_0, POOL_KER_DIM_1,
                        POOL_PADDING_1, POOL_STRIDE_1, POOL_OUT_DIM_1, NULL, img_buffer2);//池化层
        
@@ -89,3 +89,20 @@ CONV_BIAS_LSHIFT_0, CONV_OUT_RSHIFT_0, img_buffer1, CONV_OUT_DIM_0,(q15_t *) col
             net量化模型
             X  测试数据，numpy数组 维度依次为数量,通道数，高度和宽度
             OUT_RSHIFT 输出偏移       
+Opencv 在STM32使用方法:
+    1.将项目中opencv文件夹添入你项目中。
+    2.根据项目所带KEIL5例子，依次将Groups opencv 中.cpp文件添加到你项目中。
+    3.添加bu.c,malloc.c到你项目中。
+    备注:由于Stm32无操作系统，故图片输入采用一种特殊方法，先创建空白图片然后填写。以下为例子.
+    	IplImage* src=cvCreateImage(cvSize(40,40),IPL_DEPTH_8U,3);   // 40 40  3   图片维度
+	uchar* data=(uchar *)src->imageData;
+	int step = src->widthStep/sizeof(uchar);
+	int channels = src->nChannels;
+	for(int i=0;i<src->height;i++){
+	     for(int j=0;j<src->width;j++){
+		   data[i*step+j*channels+0]=102;
+		   data[i*step+j*channels+1]=102;
+		   data[i*step+j*channels+2]=255;
+	      }		 
+	}
+     4.开始使用。相关函数介绍及文件位置，可自行搜索Opencv1.0 API介绍。
