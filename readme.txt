@@ -1,6 +1,6 @@
 
 
-本项目基本上基于ARM CMISIS NN库，相当于CMISIS NN的一个应用,但对NN库进行了一定裁剪和扩充，也可以单片机运行Opencv1.0。若有不足，敬请原谅。
+本项目基本上基于ARM CMISIS NN库，相当于CMISIS NN的一个应用,但对NN库进行了一定裁剪和扩充，也可以单片机运行Opencv1.0。若有不足，敬请原谅。更多资料可查看ARM CMIS NN库
 python环境要求:
   1. mxnet-cu100          1.5.0
   2. d2lzh                1.0.0
@@ -25,7 +25,7 @@ STM32 要求:
   1 .模型训练完毕，使用net.save_parameters("file_name") 
      net       为训练的模型
      file_name 任意即可，没有后缀名要求
-  2. 模型量化，类似下方代码。全部代码在量化并存储模型4.0和测试.ipynb中，根据需要进行修改
+  2. 模型量化，类似下方代码。全部代码在量化并存储模型4.0和测试.ipynb中，根据需要进行修改，模型量化采用手动最大量化。
       net = nn.Sequential()
       ///////////////////////////////////模型结构搭建
       net.add(nn.Conv2D(channels=1, kernel_size=3, activation='relu'),
