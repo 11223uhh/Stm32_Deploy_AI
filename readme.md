@@ -31,9 +31,10 @@
 >STM32例子:
 >>Example1 基于ARM CMISI NN 库，识别一张给定的mnist图片，图片已经写入代码。  
 >>Example2 基于Tenorflow lite 库，拟合正弦曲线，显示在屏幕。   
+>>Example3 基于ARM CMISI NN 库，nucelo-stm32串口发送图片进行识别，并预测时间。   
 
 > Arduino UNO R3例子:  
->> 基于ARM CMISI NN 库，识别一张给定的mnist图片，可以通过串口发送图片识别。  
+>> 基于ARM CMISI NN 库，识别一张给定的mnist图片，通过串口发送图片识别，并预测时间。  
   
 > opencv 例子:
 >>一些opencv的函数使用，例子
