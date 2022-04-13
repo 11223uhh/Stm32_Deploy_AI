@@ -44,7 +44,13 @@ q7_t ip1_bias[IP1_OUT_4] = Dense_2bias;
     q7_t      output_data[IP1_OUT_4];//IP1_OUT_4 模型识别类数
     uint8_t   image_data[CONV_IM_CH_0 * CONV_IM_DIM_0 * CONV_IM_DIM_0] = { };//image_data模型输入数据数组。
     q7_t     *img_buffer1 = scratch_buffer;
-    q7_t     *img_buffer2 = img_buffer1 + CONV_OUT_CH_0 * CONV_OUT_DIM_0 * CONV_OUT_DIM_0;//+ CONV1_OUT_CH * CONV1_OUT_DIM * CONV1_OUT_DIM为卷积运算完存数据做的操作
+    q7_t     *img_buffer2 = img_buffer1 + CONV_OUT_CH_0 * CONV_OUT_DIM_0 * CONV_OUT_DIM_0;//+ CONV1_OUT_CH * CONV1_OUT_DIM * CONV1_OUT_DIM为卷积运算完存数据做的操作 
+
+ **备注:**  图片在进行卷积和其他操作时都是在同一缓存区，进行的。一般是从img_buffer1拿数据，然后操作写入img_buffer2，或者相反。img_buffer1和img_buffer2都是在同一数组，只是位置不同。所以二者最好间隔远一些，否则会出现问题。比如y=x*w+b.如果img_buffer1和img_buffer2间隔太近，有可能输出的y会覆盖x,导致卷积错误。 CONV1_OUT_CH * CONV1_OUT_DIM * CONV1_OUT_DIM这个绝对不能直接使用，需要自己计算，判断使用img_buffer1所需的最大空间，假如空间为W_K则
+ img_buffer2=img_buffer1+w_K
+
+
+
     for (int i=0;i<28*28*1; i++) 
         img_buffer2[i] =(q7_t)image_data[i];//往数组存数据，根据实际情况，添加数据。需要将三维数组reshape一维，添加。这只是一个例子
 ```
