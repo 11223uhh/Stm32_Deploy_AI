@@ -56,7 +56,6 @@ def INT8_liang(data):
     return data_INT
 
 
-
 #采用最大量化
 def INT8_net_pranms_Init(net,BIAS_LSHIFT):
     count=0
@@ -76,10 +75,9 @@ def INT8_net_pranms_Init(net,BIAS_LSHIFT):
             print("")
     return net
 def INT_8_net_4_test_s(net,X,OUT_RSHIFT):
-    global ouput1
     ouput_shift=0
     bias_shift=0
-    X=X.astype("int8")
+    X = nd.clip(X, -127, 127)                     #将小于1的值自动变为1，大于10的数变为10
     X=X.astype("float32") #为了python计算
     count=0
     for layer in net:
@@ -87,22 +85,25 @@ def INT_8_net_4_test_s(net,X,OUT_RSHIFT):
         cneg_name=str_temp.split("(")[0]
         if(cneg_name=="Conv2D")or(cneg_name=="Dense"):
             ouput_shift=OUT_RSHIFT[count]
+            
             ouput_shift=2**ouput_shift
-            X=layer(X)
+            X=layer(X)+0.5
             #print(X.max(),layer)
-            X=X/ouput_shift                                   #输出偏移
+            X=X/ouput_shift   
+            #输出偏移
             X=nd.round(X)
             #print(X.max())
-            X=X.astype("int8")
-            if(count==1):
-                ouput1=X
+            X = nd.clip(X, -127, 127)                     #将小于1的值自动变为1，大于10的数变为10
+
+           
             X=X.astype("float32")
             count=count+1
         else:
             X=layer(X)
-            X=X.astype("int8")
+            X = nd.clip(X, -127, 127)                     #将小于1的值自动变为1，大于10的数变为10
             X=X.astype("float32")
     return X
+
 
 
 
