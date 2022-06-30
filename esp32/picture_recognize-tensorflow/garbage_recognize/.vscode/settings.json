@@ -1,0 +1,22 @@
+{
+    "idf.adapterTargetName": "esp32",
+    "idf.portWin": "COM6",
+    "files.associations": {
+        "micro_error_reporter.h": "c",
+        "ratio": "cpp",
+        "array": "cpp",
+        "cstdarg": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ll_cam.h": "c",
+        "chrono": "cpp",
+        "algorithm": "cpp",
+        "pwm_motor.h": "c",
+        "gpio_motor.h": "c"
+    },
+    "idf.flashType": "UART",
+    "idf.openOcdConfigs": [
+        "interface/ftdi/esp32_devkitj_v1.cfg",
+        "target/esp32.cfg"
+    ]
+}
