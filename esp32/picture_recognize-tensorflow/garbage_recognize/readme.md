@@ -16,9 +16,11 @@
 - 180度舵机
 - 电池
 ## 其他要求
-- cuda 11.0
-- cudnn 忘记了
+- cuda 11.0 下载链接 https://developer.nvidia.cn/cuda-toolkit-archive
+- cudnn 8.0 下载链接 https://developer.nvidia.cn/cudnn-download-survey
 - cuda和显卡版本见https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+- cuda和cudnn对应关系https://tensorflow.google.cn/install/source_windows?hl=cn
+- 
 ## 文件介绍
 * main.cpp  
   >主文件 模型的加载，图像传感器和电机的初始化，模型的载入，识别，电机控制  
