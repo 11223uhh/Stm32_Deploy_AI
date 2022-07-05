@@ -18,6 +18,7 @@
 ## 其他要求
 - cuda 11.0
 - cudnn 忘记了
+- cuda和显卡版本见https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
 ## 文件介绍
 * main.cpp  
   >主文件 模型的加载，图像传感器和电机的初始化，模型的载入，识别，电机控制  
