@@ -1,51 +1,68 @@
-**本项目基本上基于ARM CMISIS NN库，相当于CMISIS NN的一个应用,但对NN库进行了一定裁剪，扩充，解释，也可以单片机运行Opencv1.0。若有不足，可以在Issues提出，有时间会看的。更多资料可查看ARM CMIS NN库**
-## 特点
-- 可以将Mxnet训练好的模型，量化之后，部署在单片机。
-- 有仿真平台可以模拟实际运行数据，精确度，所需RAM和ROM。
-- 可以使用一些Opencv 1.0的简单函数,如图片缩放,灰度化,边缘检测,霍夫变换,腐蚀,膨胀等.
-- 可以查看每一层的输出。
-- 目前仅支持VGG块，不支持Resnet，nin，googlenet，mobbilenet，未来可以更新，敬请期待。
-- 带有例程方便理解。
-- 为了方便移植仅使用CMSIS NN库一些基础函数，并未使用一些加速函数。
-##
-## python环境要求
-- mxnet-cu100    =1.5.0 
-- d2lzh          =1.0.0
-- opencv-python =4.5.4.60
-- Pillow         =   8.4.0  
+# STM32 Deploy AI
 
-**备注**：并非在其他版本,不能使用,只是在此环境下成功运行了,其他神经网络框架如Keras也可以实现，有点麻烦。
-##   
+**本项目基于 ARM CMSIS-NN 库开发，是 CMSIS-NN 的一个实践应用。项目对 NN 库进行了裁剪、扩充和优化，同时支持在单片机上运行 OpenCV 1.0。如有问题欢迎在 Issues 中提出。更多详细信息请参考 ARM CMSIS-NN 库文档。**
 
-## STM32要求
-- STM32F407ZGT6,其他芯片亦可,但仅在此芯片进行了测试.
-- TFT屏幕
-- ARM仿真下载器,有其他下载器亦可.  
+## 项目特点
 
-**备注**：如果嫌麻烦，可以在淘宝购买STM32F4mini探索版开发板(带屏幕,f407zgt6)，其他芯片和开发版也可以简单移植,本项目有STM32例程和arduino(不支持opencv)例程。。
-##
+- 支持将 MXNet 训练的模型量化后部署到单片机
+- 提供仿真平台，可模拟实际运行数据、精确度、RAM和ROM占用
+- 集成 OpenCV 1.0 基础功能：
+  - 图片缩放
+  - 灰度化处理
+  - 边缘检测
+  - 霍夫变换
+  - 图像腐蚀和膨胀
+- 支持查看神经网络每一层的输出
+- 当前支持 VGG 网络结构（暂不支持 ResNet、NiN、GoogLeNet、MobileNet）
+- 提供丰富的示例代码
+- 使用 CMSIS-NN 基础函数，便于移植（未使用加速函数）
 
+## 环境要求
 
+### Python 环境
+```
+mxnet-cu100    == 1.5.0 
+d2lzh          == 1.0.0
+opencv-python  == 4.5.4.60
+Pillow         == 8.4.0
+```
+> **注意**：以上版本在测试环境中运行正常，其他版本也可能支持。如需使用其他深度学习框架（如 Keras），需要额外配置。
 
-## 例程
->STM32例子:
->>Example1 基于ARM CMISI NN 库，识别一张给定的mnist图片，图片已经写入代码。  
->>Example2 基于Tenorflow lite 库，拟合正弦曲线，显示在屏幕。   
->>Example3 基于ARM CMISI NN 库，nucelo-stm32串口发送图片进行识别，并预测时间。   
+### STM32 硬件要求
+- 开发板：STM32F407ZGT6（其他型号可能需要适配）
+- 显示屏：TFT屏幕
+- 下载器：ARM 仿真下载器（或其他兼容下载器）
 
-> Arduino UNO R3例子:  
->> 基于ARM CMISI NN 库，识别一张给定的mnist图片，通过串口发送图片识别，并预测时间。  
-  
-> opencv 例子:
->>一些opencv的函数使用，例子
+> **推荐**：可以直接购买 STM32F4mini 探索版开发板（带屏幕，使用F407ZGT6芯片）。项目同时提供 STM32 和 Arduino（不支持 OpenCV）的示例程序。
 
+## 示例程序
 
-##
+### STM32 示例
+1. Example1：使用 ARM CMSIS-NN 库识别预置的 MNIST 手写数字图片
+2. Example2：基于 TensorFlow Lite 实现正弦曲线拟合并显示
+3. Example3：通过 Nucleo-STM32 串口传输图片进行识别并计时
 
-## 文件介绍:  
-- python  模型量化，仿真
-- Example 相关例子
-## 
-## 使用方法(仅仅介绍基于ARM CMISI NN的模型部署和Opencv移植)
-参考  get_start.md
-##
+### Arduino UNO R3 示例
+- 基于 ARM CMISIS-NN 库实现 MNIST 图片识别，支持串口传输和计时功能
+
+### OpenCV 示例
+- 包含多个 OpenCV 函数使用示例
+
+## 项目结构
+
+- `python/`：模型量化和仿真相关代码
+- `Example/`：各类示例程序
+- `opencv/`：OpenCV 相关实现
+- `get_start.md`：详细使用说明
+
+## 使用指南
+
+本项目主要介绍基于 ARM CMISIS-NN 的模型部署和 OpenCV 移植方法，详细使用说明请参考 [get_start.md](get_start.md)。
+
+## 贡献指南
+
+欢迎提交 Issue 和 Pull Request 来帮助改进项目。
+
+## 许可证
+
+[请补充许可证信息]
